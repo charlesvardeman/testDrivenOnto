@@ -1,0 +1,34 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix test: <http://w3id.org/test#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+
+
+test:ontoshape a sh:NodeShape ;
+  sh:targetClass owl:Ontology ;
+  # Ontology MUST contain a valid dct:created as xsd:date or xsd:dateTime
+  sh:property [
+    sh:path dct:created ;
+    sh:minCount 1;
+    sh:maxCount 1;
+    sh:or (
+      [
+				sh:datatype xsd:date ;
+			]
+			[
+				sh:datatype xsd:dateTime ;
+			]
+    )
+  ] .
+
