@@ -1,3 +1,3 @@
-# Ontology Medadata Validation for Title
+# Test-Driven Ontology Development Prototype using SHACL
 
-*title* - ``rdfs:label`` or ``skos:prefLabel`` or ``dct:title`` or ``dc:title``
+This is a ontology/vocabulary development environment using SHACL validation for the ontologies.
