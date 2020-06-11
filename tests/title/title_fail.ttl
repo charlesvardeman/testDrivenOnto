@@ -13,4 +13,4 @@
 @prefix reg: <http://purl.org/linked-data/registry> .
 
 
-<test:ontology> rdf:type owl:Ontology .
+<test:fail> rdf:type owl:Ontology .

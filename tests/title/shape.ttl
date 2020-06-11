@@ -9,7 +9,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix test: <https://w3id.org/test/> .
+@prefix test: <http://w3id.org/test#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
