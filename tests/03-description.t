@@ -12,14 +12,22 @@ test_expect_failure "Test no date validation failure" "
     pyshacl -s '$TESTDIR/shape.ttl' '$TESTDIR/date_fail.ttl'
 "
 
-test_expect_success "Test date1 dct:created xsd:date" "
-    pyshacl -s '$TESTDIR/shape.ttl' '$TESTDIR/date1.ttl'
+test_expect_success "Test description1 rdfs:comment" "
+    pyshacl -s '$TESTDIR/shape.ttl' '$TESTDIR/description_test1.ttl'
 "
 
-test_expect_success "Test date2 dct:created xsd:datetime" "
-    pyshacl -s '$TESTDIR/shape.ttl' '$TESTDIR/date2.ttl'
+test_expect_success "Test description2 skos:definition" "
+    pyshacl -s '$TESTDIR/shape.ttl' '$TESTDIR/description_test2.ttl'
 "
 
+
+test_expect_success "Test description3 dct:description" "
+    pyshacl -s '$TESTDIR/shape.ttl' '$TESTDIR/description_test3.ttl'
+"
+
+test_expect_success "Test description4 dc:description" "
+    pyshacl -s '$TESTDIR/shape.ttl' '$TESTDIR/description_test4.ttl'
+"
 
 test_done
 

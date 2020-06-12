@@ -20,25 +20,25 @@ test:ontoshape a sh:NodeShape ;
   # Ontology MUST contain a tile in rdfs:label or skos:prefLabel or dct:title or dc:title
   sh:or (
     [ sh:property [
-        sh:path rdfs:label ;
+        sh:path rdfs:comment ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         ]
     ]
      [ sh:property [
-        sh:path skos:prefLabel ;
+        sh:path skos:definition ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         ]
     ]
      [ sh:property [
-        sh:path dct:title ;
+        sh:path dct:description ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         ]
     ]
      [ sh:property [
-        sh:path dc:title ;
+        sh:path dc:description ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         ]
