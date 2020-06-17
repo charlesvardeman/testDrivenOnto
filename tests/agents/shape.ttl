@@ -70,6 +70,7 @@ test:User a sh:NodeShape ;
 
 test:Affiliation a sh:NodeShape ;
   sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:targetClass schema:Organization ;
   sh:property [
     sh:path schema:name ;
     sh:minCount 1;
@@ -83,5 +84,20 @@ test:Affiliation a sh:NodeShape ;
   ] ;
   .
 
+test:memberOf a sh:NodeShape ;
+  sh:nodeKind sh:BlankNodeOrIRI ;
+  sh:targetClass schema:Organization ;
+  sh:property [
+    sh:path schema:name ;
+    sh:minCount 1;
+    sh:maxCount 1;
+    sh:datatype xsd:string;
+  ] ;
+  sh:property [
+    sh:path schema:url ;
+    sh:minCount 1;
+    sh:datatype xsd:string ;
+  ] ;
+  .
 
 
